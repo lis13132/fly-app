@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, {FC, useCallback} from "react";
 import {styles} from './styles'
 import s7 from '../images/s7.png'
 import ba from '../images/ba.png'
@@ -29,14 +29,15 @@ interface ICardInfo {
 
 const FlightCard: FC<IProps> = ({cardInfo, valute, currentEur, currentUsd }) => {
 
-  const flyDate =(datefly: string)=>{
+  const flyDate = useCallback((datefly: string)=>{
     const daysName=['ПН','ВТ','СР','ЧТ','ПТ','СБ','ВС']
     const dateSplit = datefly.split('.');
     let date = new Date(Number('20'+dateSplit[2]), Number(dateSplit[1])-1, Number(dateSplit[0]));
     const dayName = daysName[(date.getDay())-1]
     return dayName
-  }
-  const priceValute = (rubPrice: number)=>{
+  },[])
+
+  const priceValute = useCallback((rubPrice: number)=>{
     switch (valute) {
       case "USD":
         return (`${(rubPrice/currentUsd).toFixed(0)} ${valute}`);
@@ -46,8 +47,9 @@ const FlightCard: FC<IProps> = ({cardInfo, valute, currentEur, currentUsd }) => 
         return (`${(rubPrice)} ${valute}`);
 
     }
-  }
-const carrierLogo = (carrierName)=>{
+  }, [currentEur, currentUsd, valute])
+
+const carrierLogo = useCallback((carrierName: string)=>{
   switch (carrierName) {
     case "SU":
       return su
@@ -58,14 +60,15 @@ const carrierLogo = (carrierName)=>{
     case "BA":
       return ba
 }}
+, [])
 
-const renderPhrase = (number) => {
+const renderPhrase = useCallback((number: number) => {
   const lastOne = Number(number.toString().slice(-1));
   if (number === 0) return "ПЕРЕСАДОК"
   if (number > 4 && number < 15) return "ПЕРЕСАДОК";
   if ([2, 3, 4].indexOf(lastOne) >= 0) return "ПЕРЕСАДКИ";
   if (lastOne === 1) return "ПЕРЕСАДКА";
-};
+}, []);
 
   return (
     
