@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+To launch this application, enter $npm start in the terminal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my test assignment.
+The task was as follows:
+You need to create a ticket issuance page with filters (as on
+layout below).
+You need to complete the following tasks:
+1. Ticket rendering (#task1)
+Use React to render tickets with
+data sorted by price from the tickets.json file.
 
-## Available Scripts
+2. Ticket filtering (#task2)
+Filtering tickets in the issue by the number of transfers.
+When performing tasks, the following conditions must be met ::
+• Use JS/TypeScript;
+• Performance in browsers: IE 11, Chrome
 
-In the project directory, you can run:
+I was not provided with clear dimensions and therefore they are relative
+to the layout of the task and some images had to be replaced with similar ones.
 
-### `npm start`
+React-component was used to render the page.
+For TypeScript data typing.
+I decided not to use ready-made style libraries, but
+to edit them myself. Inline Stylesheet
+and standard CSS for pseudo - rendering button manipulations were used to set styles .
+In the provided tickets.there was no json sorting regarding the departure time.
+This functionality has been refined and sorting has been created depending on the checkboxes selected by the user
+To convert currencies, the CBRF API and the Axios library were used to get data
+-------------
+Чтобы запустить данное приложение введите в терминале $ npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Это мое тестовое задание.
+Задание было таковым:
+ создать страницу выдачи билетов с фильтрами (как на 
+макете ниже). 
+Нужно выполнить следующие задания:
+1. Рендер билетов (#task1)
+Используйте React для того чтобы отрендерить билеты с 
+данными сортированные по цене из файла tickets.json.
+ 
+2. Фильтрация билетов (#task2)
+Фильтрация билетов в выдаче по количеству пересадок.
+При выполнении задач должны быть соблюдены условия:
+• Используйте JS/TypeScript;
+• Работоспособность в браузерах: IE 11, Chrome
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Мне не были предоставлены четкие размеры и поэтому  они относительны
+к макету задания и некоторые изображения пришлось заменить подобными. 
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Для рендера страницы были использованы React-component. 
+Для типизации данных TypeScript.
+Мною было принято решение не использовать готовые библиотеки стилей, а
+редактировать самостоятельно. Для задания стилей использовался  Inline Stylesheet
+и стандартный CSS для псевдорендеринга манипуляций с кнопками .
+В предоставленном tickets.json не было сортировки относительно времени вылета. 
+Этот функционал был доработан и создана сортировка в зависимости от выбраных пользователем checkbox
+Для конвертации валют использовалось API CBRF и библиотека Axios для получения данных 
